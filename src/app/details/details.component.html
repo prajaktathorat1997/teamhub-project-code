@@ -1,0 +1,59 @@
+<div class="container-fluid">
+  <app-header></app-header>
+</div>
+<br />
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div>
+        <div class="card myrgb" style="width: 400px">
+          <div class="card-body">
+            <h4 class="card-title">{{ empObj.name }}</h4>
+            <div class="card-text">
+              <h5 style="text-align: center">
+                <label for="">Status:</label> &nbsp;
+                <span
+                  [ngClass]="{
+                    badge: true,
+                    'rounded-pill': true,
+                    'bg-success': empObj.status.toLowerCase() === 'active',
+                    'bg-warning': empObj.status.toLowerCase() === 'inactive',
+                    'bg-danger': empObj.status.toLowerCase() === 'suspend'
+                  }"
+                  style="padding: 10px"
+                >
+                  {{ empObj.status }}
+                </span>
+              </h5>
+              <span> {{ empObj.emailId }} </span><br />
+              <span> {{ empObj.dept }} </span><br />
+              <span> {{ empObj.mobileNo }} </span><br />
+              <span> {{ empObj.createdDate }} </span><br />
+
+              <span> {{ empObj.salary }} </span><br />
+              <span>
+                <strong> {{ empObj.country.cname }} </strong>
+              </span>
+            </div>
+            <div>
+              <button class="btn btn-warning" (click)="onUpdate(popUp)">
+                Update Employee
+              </button>
+
+              <ng-template #popUp>
+                <app-updateemployee
+                  [parentObj]="empObj"
+                  [eId]="eid"
+                ></app-updateemployee>
+                <button (click)="modalRef.hide()" class="btn btn-danger">
+                  Cancel
+                </button>
+              </ng-template>
+              <button routerLink="/home" class="btn btn-warning">Home</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

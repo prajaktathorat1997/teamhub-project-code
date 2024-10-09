@@ -1,0 +1,44 @@
+/* mat-confirm-dialog.component.css */
+
+.confirm-dialog-container {
+    background-color: #ffffff; /* Background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+  
+  /* Title styling */
+  h2.mat-dialog-title {
+    font-size: 1.5rem; /* Title size */
+    font-weight: bold; /* Title weight */
+    color: #333; /* Title color */
+  }
+  
+  /* Content styling */
+  mat-dialog-content {
+    font-size: 1rem; /* Font size */
+    color: #666; /* Font color */
+    padding: 20px; /* Padding around content */
+  }
+  
+  /* Action buttons styling */
+  mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end; /* Align buttons to the right */
+    padding: 10px; /* Padding for actions */
+  }
+  
+  button {
+    font-size: 1rem; /* Button font size */
+    margin-left: 10px; /* Space between buttons */
+  }
+  
+  /* Delete button styling */
+  button[color="warn"] {
+    background-color: #f44336; /* Red background for delete button */
+    color: #ffffff; /* White text color */
+  }
+  
+  button[color="warn"]:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+  }
+  

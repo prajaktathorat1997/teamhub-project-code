@@ -1,0 +1,18 @@
+nav {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  nav button {
+    background-color: #4caf50; /* Green */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 5px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  nav button:hover {
+    background-color: #45a049; /* Darker green */
+  }
